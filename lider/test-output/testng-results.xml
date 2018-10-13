@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2163" started-at="2018-10-13T05:28:47Z" finished-at="2018-10-13T05:28:49Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2163" started-at="2018-10-13T05:28:47Z" finished-at="2018-10-13T05:28:49Z">
+      <class name="testcases.AddtoCartSuperMarket">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.AddtoCartSuperMarket@127bd23]" name="beforeSuite" is-config="true" duration-ms="1475" started-at="2018-10-13T05:28:46Z" finished-at="2018-10-13T05:28:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="setData()[pri:0, instance:testcases.AddtoCartSuperMarket@127bd23]" name="setData" is-config="true" duration-ms="1" started-at="2018-10-13T05:28:47Z" finished-at="2018-10-13T05:28:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setData -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.AddtoCartSuperMarket@127bd23]" name="beforeClass" is-config="true" duration-ms="2" started-at="2018-10-13T05:28:47Z" finished-at="2018-10-13T05:28:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="addtocart(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddtoCartSuperMarket@127bd23]" name="addtocart" duration-ms="2116" started-at="2018-10-13T05:28:47Z" data-provider="fetchData" finished-at="2018-10-13T05:28:49Z">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
+            <message>
+              <![CDATA[
+Data provider mismatch
+Method: addtocart([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) u.arjunkumar@gmail.com,(java.lang.String) Hitman12$]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+Data provider mismatch
+Method: addtocart([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) u.arjunkumar@gmail.com,(java.lang.String) Hitman12$]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:45)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:796)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:983)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addtocart -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.AddtoCartSuperMarket@127bd23]" name="afterTest" is-config="true" duration-ms="2" started-at="2018-10-13T05:28:49Z" finished-at="2018-10-13T05:28:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.AddtoCartSuperMarket@127bd23]" name="afterSuite" is-config="true" duration-ms="855" started-at="2018-10-13T05:28:50Z" finished-at="2018-10-13T05:28:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testcases.AddtoCartSuperMarket -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
