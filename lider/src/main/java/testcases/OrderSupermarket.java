@@ -18,7 +18,7 @@ public class OrderSupermarket extends ProjectMethods{
 		dataSheetName="TC002";
 	}
 	@Test(dataProvider="fetchData")
-	public void order(String email, String password)  {
+	public void order(String email, String password, String text)  {
 		
 		new HomePage_Lider()
 		.navigatoSupermarket()
@@ -26,10 +26,16 @@ public class OrderSupermarket extends ProjectMethods{
 		.enteremail(email)
 		.enterpassword(password)
 		.login()
-		.cybernavigation()
+		.enterSearchkey(text)
+		.addingtocart()
+		.clickcart()
+		
+		.checkout()
 		.clickproduct()
-		.addtocart()
-		.viewcarts();
+
+		.clickorder()
+
+		.navigatetocart();
 
 }
 }

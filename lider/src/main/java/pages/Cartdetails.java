@@ -36,19 +36,25 @@ public class Cartdetails extends ProjectMethods{
 	
 	
 
-	@FindBy(how=How.XPATH,using="//*[contains(@class,'btn btn-default btn-iconos hidden-xs btn-delete-product')]")
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'ico-trash-d')]")
 	private WebElement delete;
 	
 	public Cartdetails clickdelete()
 	{
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	click(delete);
+		click(delete);
+
 		
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@onclick,'clickCartGoToCartButton();')]")
+	private WebElement viewCartbutton;
+	
+	public Cartdetails cartdes()
+	{
+		
+		highLighterMethod(driver, viewCartbutton);
+		click(viewCartbutton);
 		return this;
 	}
 	

@@ -26,23 +26,34 @@ public class Searchresults_SM  extends ProjectMethods{
 	@FindBy(how=How.XPATH,using="//*[contains(@id,'add-button')]")
 	private WebElement addtocartbutton;
 	
-	public Searchresults_SM addingtocart()
+	public Cart addingtocart()
 	{
-		highLighterMethod(driver, searchconfirmtext);
-		verifyDisplayed(searchconfirmtext);
-		return this;
+		highLighterMethod(driver, addtocartbutton);
+		click(addtocartbutton);
+		return new Cart();
 	}
 	
-	@FindBy(how=How.XPATH,using="//*[contains(@id,'cartgotocartbutton')]")
-	private WebElement viewCartbutton;
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'icon-new icon-cart')]")
+	private WebElement viewCartbut;
 	
 	public Cartdetails viewcarts()
+	{
+		
+		highLighterMethod(driver, viewCartbut);
+		click(viewCartbut);
+		return new Cartdetails();
+	}
+		
+	@FindBy(how=How.XPATH,using="//*[contains(@onclick,'clickCartGoToCartButton();')]")
+	private WebElement viewCartbutton;
+	
+	public Cartdetails cartdes()
 	{
 		
 		highLighterMethod(driver, viewCartbutton);
 		click(viewCartbutton);
 		return new Cartdetails();
 	}
-		
+	
 
 }

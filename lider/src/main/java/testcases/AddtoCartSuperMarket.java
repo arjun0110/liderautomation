@@ -28,7 +28,7 @@ public class AddtoCartSuperMarket extends ProjectMethods{
 		.login()
 		.enterSearchkey(text)
 		.addingtocart()
-		.viewcarts();
+		.clickcart();
 
 }
 }

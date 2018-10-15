@@ -49,7 +49,7 @@ public class Productdetails_SM extends ProjectMethods{
 		return new Productdetails_SM();
 	}
 	
-	public Productdetails_SM viewcarts()
+	public Cart viewcarts()
 	{
 		
 		click(viewcartlink);
@@ -57,7 +57,7 @@ public class Productdetails_SM extends ProjectMethods{
 		
 		
 		
-		return new Productdetails_SM();
+		return new Cart();
 	}
 
 }

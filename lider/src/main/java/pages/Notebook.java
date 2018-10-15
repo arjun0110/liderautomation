@@ -13,7 +13,7 @@ public class Notebook extends ProjectMethods{
 		PageFactory.initElements(driver,this);
 	}	
 	
-	@FindBy(how=How.XPATH,using="//*[contains(@title,'Notebook 15.6 / Intel Core i7 / 8 GB / 1 TB / T. Video 2 GB')]")
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'productBox[911812]')]")
 	private WebElement clickaproduct1;
 	
 	public Productdetails clickingaproduct()
@@ -25,7 +25,7 @@ public class Notebook extends ProjectMethods{
 	}
 
 	
-	@FindBy(how=How.XPATH,using="//*[contains(@class, 'js-compare select-compare') and contains(@data-prodid,'PROD_911816')]")
+	@FindBy(how=How.XPATH,using="//*[contains(@class, 'js-compare select-compare') and contains(@data-prodid,'PROD_913904')]")
 	private WebElement compareprod1;
 	
 	public Notebook comparefirst()

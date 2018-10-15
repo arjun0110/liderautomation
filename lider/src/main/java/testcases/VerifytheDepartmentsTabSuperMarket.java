@@ -35,10 +35,6 @@ public class VerifytheDepartmentsTabSuperMarket extends ProjectMethods{
 		.LimpiezayAseo()
 		.PerfumeríaySalud()
 		.HogaryBazar()
-		.Especiales()
-		.cyber1()
-		.greatvalue()
-		.EspecialLimpieza();
-		
+		.Especiales();
 	}
 }

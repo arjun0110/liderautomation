@@ -295,13 +295,21 @@ public class HomePage_Lider extends ProjectMethods{
 	}
 	
 	
-	@FindBy(how=How.XPATH,using="//*[contains(@class, 'https://www.lider.cl/electrohogar/MundoBebe') and contains(@class ,'item')]")
+	@FindBy(how=How.XPATH,using="//*[contains(@href, 'https://www.lider.cl/electrohogar/MundoBebe') and contains(@class ,'item')]")
 	private WebElement mondobebelink;
 	
 	
 	public HomePage_Lider mondobebe()
 	{
+		
+		
 		click(mondobebelink);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		return this;
 	}
