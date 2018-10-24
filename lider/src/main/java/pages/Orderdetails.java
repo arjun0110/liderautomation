@@ -53,7 +53,7 @@ public class Orderdetails extends ProjectMethods{
 	public OrderConfirm clickorder()
 	{
 		
-		
+	
 		click(orderbutton);
 		return new OrderConfirm();
 	}

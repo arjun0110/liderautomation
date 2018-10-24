@@ -15,7 +15,7 @@ public class LoginandLogout extends ProjectMethods{
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="TC002";
+		dataSheetName="Login";
 	}
 	@Test(dataProvider="fetchData")
 	public void loginandlogout(String email, String password)  {

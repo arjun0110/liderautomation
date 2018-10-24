@@ -36,7 +36,7 @@ public class Cartdetails extends ProjectMethods{
 	
 	
 
-	@FindBy(how=How.XPATH,using="//*[contains(@class,'ico-trash-d')]")
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'btn btn-default btn-iconos hidden-xs btn-delete-product')]")
 	private WebElement delete;
 	
 	public Cartdetails clickdelete()

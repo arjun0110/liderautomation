@@ -3,18 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.OrderSupermarket">
+      <class name="testcases.VerifyFiltersSuperMarket">
         <methods>
+          <include name="verifyFilters"/>
           <include name="afterTest"/>
           <include name="beforeSuite"/>
-          <include name="setData"/>
           <include name="afterSuite"/>
+          <include name="setData"/>
           <include name="afterMethod"/>
-          <include name="order"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- testcases.OrderSupermarket -->
+      </class> <!-- testcases.VerifyFiltersSuperMarket -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

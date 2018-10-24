@@ -100,8 +100,11 @@ public class OrderConfirm extends ProjectMethods{
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+
 		click(cartsec);
+
 		click(cartbutton);
+	
 		click(delete);
 		
 		

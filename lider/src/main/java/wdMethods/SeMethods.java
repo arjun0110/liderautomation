@@ -482,6 +482,7 @@ public void highLighterMethod(WebDriver driver, WebElement element){
 public void scrollBottom() {
 	((JavascriptExecutor) driver)
     .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	takeSnap();
 }
 
 public void newTab() {

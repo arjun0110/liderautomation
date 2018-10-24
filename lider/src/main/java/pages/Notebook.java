@@ -25,7 +25,7 @@ public class Notebook extends ProjectMethods{
 	}
 
 	
-	@FindBy(how=How.XPATH,using="//*[contains(@class, 'js-compare select-compare') and contains(@data-prodid,'PROD_913904')]")
+	@FindBy(how=How.XPATH,using="//*[contains(@class, 'js-compare select-compare') and contains(@data-prodid,'PROD_911812')]")
 	private WebElement compareprod1;
 	
 	public Notebook comparefirst()
@@ -36,7 +36,7 @@ public class Notebook extends ProjectMethods{
 	}
 	
 	
-	@FindBy(how=How.XPATH,using="//*[contains(@class, 'js-compare select-compare') and contains(@data-prodid,'PROD_911812')]")
+	@FindBy(how=How.XPATH,using="//*[contains(@class, 'js-compare select-compare') and contains(@data-prodid,'PROD_939489')]")
 	private WebElement compareprod2;
 	
 	public Notebook comparesecond()

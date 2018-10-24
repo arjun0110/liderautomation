@@ -40,14 +40,27 @@ public class Cart extends ProjectMethods{
 	@FindBy(how=How.XPATH,using="//*[contains(@id,'cartgotocartbutton')]")
 	private WebElement viewCartbutton;
 	
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@class,js-delete-product ico-trash btn-delete-product-qc')]")
+	private WebElement delete;
+	
 	public Cartdetails viewcart()
 	{
 		
 		highLighterMethod(driver, viewCartbutton);
 		click(viewCartbutton);
+	
 		return new Cartdetails();
 	}
 	
+	public Cartdetails deletecart()
+	{
+		
+		highLighterMethod(driver, delete);
+		click(delete);
+	
+		return new Cartdetails();
+	}
 
 	@FindBy(how=How.XPATH,using="//*[contains(@id,'cartgotocartbutton')]")
 	private WebElement orderbutton;
