@@ -62,6 +62,12 @@ public class SeMethods extends Reporter implements WdMethods{
 			e.printStackTrace();
 		}
 	}
+	
+	public void typewithenter(WebElement ele) {
+		
+		ele.sendKeys( Keys.ENTER);
+		
+	}
 
 	public void startApp(String browser, boolean bRemote) {
 		try {
@@ -458,8 +464,31 @@ takeSnap();
 		
 		Actions se = new Actions(driver);
 		se.moveToElement(ele).build().perform();
+		System.out.println("elemtn visibile");
 		takeSnap();
 	}
+	
+	public void mouseHove1r(WebElement ele) {
+		
+		Actions se = new Actions(driver);
+		se.sendKeys(Keys.ARROW_DOWN).build().perform();
+		se.sendKeys(Keys.ARROW_DOWN).build().perform();
+		se.sendKeys(Keys.ARROW_DOWN).build().perform();
+		se.sendKeys(Keys.ARROW_DOWN).build().perform();
+		se.sendKeys(Keys.ARROW_DOWN).build().perform();
+		se.sendKeys(Keys.ARROW_DOWN).build().perform();
+		se.sendKeys(Keys.ARROW_DOWN).build().perform();
+		se.sendKeys(Keys.ENTER).build().perform();
+		takeSnap();
+	}
+	
+public void mouseHove2r(WebElement ele) {
+		
+		Actions se = new Actions(driver);
+		se.sendKeys(Keys.ARROW_DOWN).build().perform();
+		se.sendKeys(Keys.ENTER).build().perform();
+		takeSnap();
+}
 	
 	public void mouseHoverclick(WebElement ele) {
 		Actions se = new Actions(driver);

@@ -47,6 +47,21 @@ public class Orderdetails extends ProjectMethods{
 		return this;
 	}
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'js-week-after pull-right')]")
+	private WebElement time;
+	public Orderdetails timeslot()
+	{
+		
+		click(selectproduct2);
+		click(time);
+		click(time);
+		return this;
+	}
+	
+	
+
+	
+	
 	@FindBy(how=How.XPATH,using="//*[contains(@class,'btn btn-buy') and contains (@style,'position: relative;')]")
 	private WebElement orderbutton;
 	

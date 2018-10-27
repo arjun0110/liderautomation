@@ -25,6 +25,19 @@ public class HomePage_Lider extends ProjectMethods{
 		return new HeaderlinkNavigation();
 	}
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'pull-right btn-vaciar-carro cartemptybutton')]")
+	private WebElement delete;
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'btnYesConfirmYesNo')]")
+	private WebElement confirm;
+	
+	public HomePage_Lider clickdelete()
+	{
+		click(delete);
+		click(confirm);
+		
+		return this;
+	}
+	
 	public HomePage_Lider checkpagescroll()
 	{
 		scrollBottom();

@@ -28,5 +28,30 @@ public class Productdetails extends ProjectMethods{
 		}
 		return new Cart();
 	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@title,'2')]")
+	private WebElement emidropdown;
+	
+	public Productdetails clickemidropdown()
+	{
+		
+		
+		click(emidropdown);
+		click(emidropdown);	
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'delivery')]")
+	private WebElement deliverysection;
+	
+	public Productdetails deliveryoptions()
+	{
+		
+		highLighterMethod(driver, deliverysection);
+		verifyDisplayed(deliverysection);
+		
+		return this;
+	}
+	
 
 }

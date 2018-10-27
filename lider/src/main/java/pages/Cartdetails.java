@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -21,28 +22,30 @@ public class Cartdetails extends ProjectMethods{
 	private WebElement paybutton;
 	
 	
-	public Cartdetails cartmessage()
+	public HomePage_Lider cartmessage()
 	{
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	
 		
-		return this;
+	try {
+		Thread.sleep(5000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+		
+		return new HomePage_Lider();
 	}
 	
 	
 
-	@FindBy(how=How.XPATH,using="//*[contains(@class,'btn btn-default btn-iconos hidden-xs btn-delete-product')]")
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'pull-right btn-vaciar-carro cartemptybutton')]")
 	private WebElement delete;
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'btnYesConfirmYesNo')]")
+	private WebElement confirm;
 	
 	public Cartdetails clickdelete()
 	{
 		click(delete);
-
+		click(confirm);
 		
 		return this;
 	}
@@ -56,6 +59,29 @@ public class Cartdetails extends ProjectMethods{
 		highLighterMethod(driver, viewCartbutton);
 		click(viewCartbutton);
 		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'searchtextinput')]")
+	private WebElement searchbutton;	
+	
+	public Cartdetails searchanotherproduct(String keyname)
+	{
+		
+		
+		type(searchbutton,keyname);
+		typewithenter(searchbutton);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"productBox[944220]\"]/a/div[2]")
+	private WebElement tvbutton;	
+	
+	public Cart clicktv()
+	{
+		
+		
+	click(tvbutton);
+		return new Cart();
 	}
 	
 	

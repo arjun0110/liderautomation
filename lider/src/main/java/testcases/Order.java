@@ -35,8 +35,14 @@ public class Order extends ProjectMethods{
 .clickproduct()
 
 .clickorder()
-
+.clickterms()
+.lidarpayment()
+.cancelLidarPayment()
+.backtolider()
 .navigatetocart();
+		
+
+
 
 		
 	}

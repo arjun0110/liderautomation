@@ -32,10 +32,11 @@ public class OrderSupermarket extends ProjectMethods{
 		
 		.checkout()
 		.clickproduct()
-
 		.clickorder()
-
+		.clickterms()
+		.lidarpayment()
+		.cancelLidarPayment()
+		.backtolider()
 		.navigatetocart();
-
 }
 }

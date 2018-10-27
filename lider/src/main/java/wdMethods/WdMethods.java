@@ -198,7 +198,8 @@ public interface WdMethods {
 		public void highLighterMethod(WebDriver driver, WebElement element);
 
 		public void scrollBottom();
-		
+		public void mouseHove1r(WebElement ele) ;
+		public void mouseHove2r(WebElement ele) ;
 		public void newTab();
 		
 		public void typewithtab(WebElement ele, String data);
@@ -214,6 +215,8 @@ public interface WdMethods {
 		public void jsclick();
 		
 		public void newTabwithoutclose();
+		
+		public void typewithenter(WebElement ele);
 		
 		public void clickenter();
 		

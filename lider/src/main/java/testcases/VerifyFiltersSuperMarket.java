@@ -15,18 +15,22 @@ public class VerifyFiltersSuperMarket extends ProjectMethods{
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="TC002";
+		dataSheetName="TC010";
 	}
 	@Test(dataProvider="fetchData")
 	public void verifyFilters(String email, String password)  {
 		
 		new HomePage_Lider()
-		.navigatoSupermarket()
+		
 		.clicklogin()
 		.enteremail(email)
 		.enterpassword(password)
 		.login()
-		.cybernavigation()
-		.filtercheck();
+		.departmenticon()
+		.computacian()
+		.notebook()
+		.fliter();
+	
+		
 }
 }

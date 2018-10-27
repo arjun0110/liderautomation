@@ -13,15 +13,26 @@ public class OrderConfirm extends ProjectMethods{
 		PageFactory.initElements(driver,this);
 	}	
 	
-	@FindBy(how=How.XPATH,using="//*[contains(@class,'chk-agree-terms')]")
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'emisor')]")
 	private WebElement terms;
 	
 	public OrderConfirm clickterms()
 	{
-		
-		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//explicitWait("//*[contains(@class,'emisor')]");
+		mouseHover(terms);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		click(terms);
-		
 		return this;
 	}
 	
@@ -36,6 +47,9 @@ public class OrderConfirm extends ProjectMethods{
 		
 		return this;
 	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@data-payment-type-id,'transbankDebit')]")
+	private WebElement redcompra; 	
 	
 	@FindBy(how=How.XPATH,using="//*[contains(@data-payment-type-id,'LiderMaster Card')]")
 	private WebElement lider;
@@ -54,17 +68,19 @@ public class OrderConfirm extends ProjectMethods{
 		return this;
 	}
 	
-	@FindBy(how=How.XPATH,using="//*[contains(text(),'RedCompra')]")
-	private WebElement redcompara;
-	
-	public OrderConfirm redcomparapayment()
+	public Redcomprapayment redcomprapayment()
 	{
 		
 		
-		verifyDisplayed(redcompara);
+		click(redcompara);
 		
-		return this;
+		return new Redcomprapayment();
 	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@data-payment-type-id,'transbankDebit')]")
+	private WebElement redcompara;
+	
+	
 	
 	@FindBy(how=How.XPATH,using="//*[contains(text(),'Tarjetas de Crédito')]")
 	private WebElement web;
@@ -86,9 +102,12 @@ public class OrderConfirm extends ProjectMethods{
 	private WebElement cartbutton;
 	
 	@FindBy(how=How.XPATH,using="//*[contains(@class,'js-delete-product ico-trash btn-delete-product-qc')]")
+	private WebElement delete;
+	@FindBy(how=How.XPATH,using="//*[contains(@alt,'Lider Logo')]")
+	private WebElement liderlogo;
 	
 
-	private WebElement delete;
+	
 	
 	public OrderConfirm navigatetocart()
 	{
@@ -100,6 +119,7 @@ public class OrderConfirm extends ProjectMethods{
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+	click(liderlogo);
 
 		click(cartsec);
 
@@ -113,13 +133,35 @@ public class OrderConfirm extends ProjectMethods{
 	
 	
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'emisor')]")
+	private WebElement terms1;
+	
+	public OrderConfirm terms()
+	{
+		
+		
+		click(terms1);
+		
+		return this;
+	}
+	
+	
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@data-payment-type-id,'liderMastercard')]")
+			private WebElement lidarpay;
+			
 	
 	
 	
 	
-	
-	
-	
+	public LidarPayment lidarpayment()
+	{
+		
+		
+		click(lidarpay);
+		
+		return new LidarPayment();
+	}
 	
 	
 	

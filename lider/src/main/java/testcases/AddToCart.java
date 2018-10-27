@@ -29,7 +29,9 @@ public class AddToCart extends ProjectMethods{
 .addingtocart(xpath)
 .clickcart()
 .viewcart()
-.cartmessage();
+.cartmessage()
+.clickdelete();
+		
 		
 	}
 }
