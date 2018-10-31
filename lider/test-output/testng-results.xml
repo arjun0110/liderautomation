@@ -2,60 +2,63 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="66565" started-at="2018-10-27T22:33:05Z" finished-at="2018-10-27T22:34:11Z">
+  <suite name="Default suite" duration-ms="220727" started-at="2018-10-31T07:06:09Z" finished-at="2018-10-31T07:09:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="66565" started-at="2018-10-27T22:33:05Z" finished-at="2018-10-27T22:34:11Z">
-      <class name="testcases.AddtoCartSuperMarket">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.AddtoCartSuperMarket@b738bb]" name="beforeSuite" is-config="true" duration-ms="2061" started-at="2018-10-27T22:33:03Z" finished-at="2018-10-27T22:33:05Z">
+    <test name="Default test" duration-ms="220727" started-at="2018-10-31T07:06:09Z" finished-at="2018-10-31T07:09:49Z">
+      <class name="testcases.Order_addedtocart">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.Order_addedtocart@127bd23]" name="beforeSuite" is-config="true" duration-ms="4694" started-at="2018-10-31T07:06:04Z" finished-at="2018-10-31T07:06:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="setData()[pri:0, instance:testcases.AddtoCartSuperMarket@b738bb]" name="setData" is-config="true" duration-ms="0" started-at="2018-10-27T22:33:05Z" finished-at="2018-10-27T22:33:05Z">
+        <test-method status="PASS" signature="setData()[pri:0, instance:testcases.Order_addedtocart@127bd23]" name="setData" is-config="true" duration-ms="1" started-at="2018-10-31T07:06:09Z" finished-at="2018-10-31T07:06:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setData -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.AddtoCartSuperMarket@b738bb]" name="beforeClass" is-config="true" duration-ms="4" started-at="2018-10-27T22:33:05Z" finished-at="2018-10-27T22:33:05Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.Order_addedtocart@127bd23]" name="beforeClass" is-config="true" duration-ms="2" started-at="2018-10-31T07:06:09Z" finished-at="2018-10-31T07:06:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.AddtoCartSuperMarket@b738bb]" name="beforeMethod" is-config="true" duration-ms="16479" started-at="2018-10-27T22:33:06Z" finished-at="2018-10-27T22:33:23Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.Order_addedtocart@127bd23]" name="beforeMethod" is-config="true" duration-ms="27514" started-at="2018-10-31T07:06:11Z" finished-at="2018-10-31T07:06:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="addtocart(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddtoCartSuperMarket@b738bb]" name="addtocart" duration-ms="48858" started-at="2018-10-27T22:33:23Z" data-provider="fetchData" finished-at="2018-10-27T22:34:11Z">
+        <test-method status="FAIL" signature="orderafteraddingincart(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.Order_addedtocart@127bd23]" name="orderafteraddingincart" duration-ms="191199" started-at="2018-10-31T07:06:38Z" data-provider="fetchData" finished-at="2018-10-31T07:09:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[u.arjunkumar@gmail.com]]>
+                <![CDATA[//*[contains(@id,'add-button')]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Hitman12$]]>
+                <![CDATA[u.arjunkumar@gmail.com]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[Hitman12$]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:60)
-at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
-at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:512)
-at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:502)
-at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:477)
-at wdMethods.SeMethods.highLighterMethod(SeMethods.java:507)
-at pages.Searchresults_SM.addingtocart(Searchresults_SM.java:31)
-at testcases.AddtoCartSuperMarket.addtocart(AddtoCartSuperMarket.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:483)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy15.toString(Unknown Source)
+at java.lang.String.valueOf(String.java:2979)
+at java.lang.StringBuilder.append(StringBuilder.java:131)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.toString(ExpectedConditions.java:699)
+at java.lang.String.valueOf(String.java:2979)
+at java.lang.StringBuilder.append(StringBuilder.java:131)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:267)
+at wdMethods.SeMethods.click(SeMethods.java:146)
+at pages.Cart.clickfusion(Cart.java:34)
+at testcases.Order_addedtocart.orderafteraddingincart(Order_addedtocart.java:42)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -86,20 +89,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addtocart -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.AddtoCartSuperMarket@b738bb]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-10-27T22:34:11Z" finished-at="2018-10-27T22:34:11Z">
+        </test-method> <!-- orderafteraddingincart -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.Order_addedtocart@127bd23]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-10-31T07:09:49Z" finished-at="2018-10-31T07:09:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.AddtoCartSuperMarket@b738bb]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-10-27T22:34:11Z" finished-at="2018-10-27T22:34:11Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.Order_addedtocart@127bd23]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-10-31T07:09:49Z" finished-at="2018-10-31T07:09:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.AddtoCartSuperMarket@b738bb]" name="afterSuite" is-config="true" duration-ms="1266" started-at="2018-10-27T22:34:12Z" finished-at="2018-10-27T22:34:13Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.Order_addedtocart@127bd23]" name="afterSuite" is-config="true" duration-ms="2496" started-at="2018-10-31T07:09:51Z" finished-at="2018-10-31T07:09:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- testcases.AddtoCartSuperMarket -->
+      </class> <!-- testcases.Order_addedtocart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

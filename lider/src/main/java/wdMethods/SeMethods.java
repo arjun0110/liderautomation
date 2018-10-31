@@ -482,6 +482,27 @@ takeSnap();
 		takeSnap();
 	}
 	
+public void mouseHove3r(WebElement ele) {
+		
+		Actions se = new Actions(driver);
+		se.sendKeys(Keys.ARROW_DOWN).build().perform();
+		se.sendKeys(Keys.ARROW_DOWN).build().perform();
+		
+
+		takeSnap();
+}
+public void mouseHove4r(WebElement ele) {	
+	Actions se = new Actions(driver);
+se.click(ele).build().perform();
+}
+
+public void mouseHove5r(WebElement ele) {	
+	Actions se = new Actions(driver);
+	se.sendKeys(Keys.ENTER).build().perform();
+	se.sendKeys(Keys.ENTER).build().perform();
+}
+	
+	
 public void mouseHove2r(WebElement ele) {
 		
 		Actions se = new Actions(driver);

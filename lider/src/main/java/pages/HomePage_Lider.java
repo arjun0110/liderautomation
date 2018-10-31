@@ -2,6 +2,7 @@ package pages;
 
 import java.awt.AWTException;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -429,8 +430,16 @@ public class HomePage_Lider extends ProjectMethods{
 		return this;
 	}
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@alt,'Lider Logo')]")
+	private WebElement logo;
 	
-	
+	public HomePage_Lider clickLogo()
+	{
+		
+		click(logo);
+		
+		return this;
+	}
 	
 	@FindBy(how=How.XPATH,using="//*[contains(@class,'name-initials')]")
 	private WebElement initials;
@@ -718,14 +727,203 @@ public class HomePage_Lider extends ProjectMethods{
 	}
 	
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@href,'/electrohogar/account/personalData.jsp')]")
+	private WebElement myaccount;
+	
+	
+	public HomePage_Lider myaccounts()
+	{
+		
+		highLighterMethod(driver, myaccount);
+	click(myaccount);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@href,'/electrohogar/account/address-book.jsp')]")
+	private WebElement address;
+	
+	public HomePage_Lider addresses()
+	{
+		
+		highLighterMethod(driver, address);
+	click(address);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'formMyAdressesEdit')]")
+	private WebElement editaddressbutton;
+	
+	public HomePage_Lider editaddress()
+	{
+		
+		highLighterMethod(driver, editaddressbutton);
+	click(editaddressbutton);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'newNumber')]")
+	private WebElement editnumb;
+	
+	public HomePage_Lider editnumber(String numb)
+	{
+		
+		highLighterMethod(driver, editnumb);
+	type(editnumb,numb);
+		return this;
+	}
+	
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'buttonNormalizeAddress')]")
+	private WebElement savebutton;
+	
+	
+	public HomePage_Lider clickSave()
+	{
+		
+		highLighterMethod(driver, savebutton);
+	click(savebutton);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@href,'/electrohogar/account/update-password.jsp')]")
+	private WebElement pwdbutton;
+	
+	public HomePage_Lider clickpassword()
+	{
+		
+		highLighterMethod(driver, pwdbutton);
+	click(pwdbutton);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'oldkeyid')]")
+	private WebElement existingpwd;
+	
+	
+	public HomePage_Lider enteroldpwd(String pwd)
+	{
+		
+		highLighterMethod(driver, existingpwd);
+	type(existingpwd,pwd);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'passwordid')]")
+	private WebElement newpwd;
+
+	public HomePage_Lider enternewpwd(String pwdd)
+	{
+		
+		highLighterMethod(driver, newpwd);
+	type(newpwd,pwdd);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'confirmpasswordid')]")
+	private WebElement newpwdconfirm;
+	
+	public HomePage_Lider enterconfirmpwd(String pwddd)
+	{
+		
+		highLighterMethod(driver, newpwdconfirm);
+	type(newpwdconfirm,pwddd);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'changePasswordBtn')]")
+	private WebElement changepwdbutton;
+	
+	public HomePage_Lider clickpasswordbutton()
+	{
+		
+		highLighterMethod(driver, changepwdbutton);
+	click(changepwdbutton);
+	try {
+		Thread.sleep(3000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+		return this;
+	}
 	
 	
 	
 	
 	
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'buttonAddAddress')]")
+	private WebElement confirmbutton;
+	
+	public HomePage_Lider clickconfirm()
+	{
+		
+		highLighterMethod(driver, confirmbutton);
+	click(confirmbutton);
+		return this;
+	}
 	
 	
+	
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@data-msg-lettersspace,'Ingresa un nombre válido')]")
+	private WebElement firstName;
+	
+	public HomePage_Lider editfirstname(String name)
+	{
+		
+	highLighterMethod(driver, firstName);
+	type(firstName,name);
+		return this;
+	}
+	
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'phoneNumber')]")
+	private WebElement mobnumber;
+	
+	public HomePage_Lider editmobnumber(String number)
+	{
+		
+	highLighterMethod(driver, mobnumber);
+	type(mobnumber,number);
+		return this;
+	}
+	
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'personalDataSubmit')]")
+	private WebElement submit;
+	
+	public HomePage_Lider clickSubmit()
+	{
+		
+click(submit);
+try {
+	Thread.sleep(2000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@value,'male')]")
+	private WebElement gender;
+	
+	public HomePage_Lider selectgender() {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", gender);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'title-welcome')]")
+	private WebElement title;
+	
+	public HomePage_Lider verifytitle() {
+	
+		highLighterMethod(driver, title);
+		verifyDisplayed(title);
+	return this;
+	}
 	
 	
 	

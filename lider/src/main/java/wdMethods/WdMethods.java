@@ -4,9 +4,11 @@ import java.awt.AWTException;
 import java.net.MalformedURLException;
 
 import org.openqa.selenium.ElementNotVisibleException;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public interface WdMethods {
 		
@@ -219,6 +221,10 @@ public interface WdMethods {
 		public void typewithenter(WebElement ele);
 		
 		public void clickenter();
+		
+		public void mouseHove3r(WebElement ele);
+		
+		public void mouseHove4r(WebElement ele);
 		
 		
 }

@@ -24,6 +24,17 @@ public class Cart extends ProjectMethods{
 		return this;
 	}
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'btn btn-info btnMerge')]")
+	private WebElement fusion;
+	//cart pag
+	public Cart clickfusion()
+	{
+		
+		
+		click(fusion);
+		return this;
+	}
+	
 	@FindBy(how=How.XPATH,using="//*[contains(@onclick,'clickCartPayButton();')]")
 	private WebElement checkoutbutton;
 	

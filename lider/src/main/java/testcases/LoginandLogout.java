@@ -28,6 +28,7 @@ public class LoginandLogout extends ProjectMethods{
 		.initialsdisplayed()
 		.clicklogin()
 		.logout();
+		
 
 }
 }

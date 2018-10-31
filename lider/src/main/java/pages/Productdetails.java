@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -21,11 +22,19 @@ public class Productdetails extends ProjectMethods{
 		explicitWait(xpath);
 		click(clickaproduct);
 		try {
-			Thread.sleep(2500);
+			Thread.sleep(7500);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return new Cart();
+	}
+	
+	public Cart addingtocarths() {
+		
+		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", clickaproduct);
 		return new Cart();
 	}
 	

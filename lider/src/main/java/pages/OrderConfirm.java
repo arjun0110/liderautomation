@@ -36,6 +36,10 @@ public class OrderConfirm extends ProjectMethods{
 		return this;
 	}
 	
+	
+	
+	
+	
 	@FindBy(how=How.XPATH,using="//*[contains(@data-payment-type-id,'transbankDebit')]")
 	private WebElement payment;
 	
